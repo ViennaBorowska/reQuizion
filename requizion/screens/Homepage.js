@@ -1,19 +1,16 @@
 import React, { Component } from "react";
-import { Button, Text, StyleSheet, View, Image } from "react-native";
-import header from "../images/REQUIZION.jpg";
+import { Button, Text, StyleSheet, View } from "react-native";
+import Header from "../components/Header";
 
 const Homepage = () => {
   return (
     <View style={{ alignContent: "center" }}>
-      <Image
-        style={{ height: 300, width: "100%", resizeMode: "contain" }}
-        source={require("../images/REQUIZION.jpg")}
-      />
+      <Header />
       <View style={{ padding: 10 }}>
-        <Text style={styles.text.heading}>Welcome to Requizion</Text>
+        <Text style={styles.text.heading}>It's study time!</Text>
         <Text style={styles.text.body}>
-          Browse available quizzes by subject below, or visit 'My Quizzes'
-          create & play your own custom quiz!
+          Browse quizzes by subject below, or visit 'My Quizzes' to create &
+          play your own custom quiz!
         </Text>
       </View>
       <View style={{ padding: 10 }}>
