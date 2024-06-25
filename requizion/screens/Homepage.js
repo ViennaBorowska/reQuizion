@@ -1,10 +1,16 @@
 import React, { Component } from "react";
-import { Button, Text, StyleSheet, View } from "react-native";
+import { Image, Text, StyleSheet, View, Pressable } from "react-native";
 import Header from "../components/Header";
+import HomeButton from "../components/HomeButton";
+import { useNavigation } from "@react-navigation/native";
 
 const Homepage = () => {
+  const navigation = useNavigation();
   return (
     <View style={{ alignContent: "center" }}>
+      <Pressable onPress={() => navigation.navigate("Home")}>
+        <HomeButton />
+      </Pressable>
       <Header />
       <View style={{ padding: 10 }}>
         <Text style={styles.text.heading}>It's study time!</Text>
@@ -14,8 +20,20 @@ const Homepage = () => {
         </Text>
       </View>
       <View style={{ padding: 10 }}>
-        <Button title={"Browse Quizzes"} onPress={() => handlePress(Browse)} />
-        <Button title={"Your Quizzes"} onPress={() => handlePress(UserQuiz)} />
+        <Pressable
+          style={styles.button}
+          title={"Browse Quizzes"}
+          onPress={() => navigation.navigate("Browse")}
+        >
+          <Text>Browse Quizzes</Text>
+        </Pressable>
+        <Pressable
+          style={styles.button}
+          title={"Your Quizzes"}
+          onPress={() => handlePress(UserQuiz)}
+        >
+          <Text>My Quizzes</Text>
+        </Pressable>
       </View>
     </View>
   );
@@ -32,6 +50,18 @@ const styles = StyleSheet.create({
       fontSize: 15,
       textAlign: "center",
     },
+  },
+  button: {
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#5ce1e6",
+    padding: 14,
+    width: 120,
+    height: 100,
+    borderRadius: 25,
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: 30,
   },
 });
 
