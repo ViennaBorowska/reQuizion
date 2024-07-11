@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Image, Text, StyleSheet, View, Pressable } from "react-native";
+import React from "react";
+import { Text, StyleSheet, View, Pressable } from "react-native";
 import Header from "../components/Header";
 import HomeButton from "../components/HomeButton";
 import { useNavigation } from "@react-navigation/native";
@@ -27,13 +27,13 @@ const Homepage = () => {
         >
           <Text>Browse Quizzes</Text>
         </Pressable>
-        <Pressable
+        {/* <Pressable
           style={styles.button}
           title={"Your Quizzes"}
           onPress={() => handlePress(UserQuiz)}
         >
           <Text>My Quizzes</Text>
-        </Pressable>
+        </Pressable> */}
       </View>
     </View>
   );
