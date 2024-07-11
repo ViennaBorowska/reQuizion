@@ -27,13 +27,13 @@ const Homepage = () => {
         >
           <Text>Browse Quizzes</Text>
         </Pressable>
-        {/* <Pressable
+        <Pressable
           style={styles.button}
           title={"Your Quizzes"}
-          onPress={() => handlePress(UserQuiz)}
+          onPress={() => navigation.navigate("UserQuizzes")}
         >
           <Text>My Quizzes</Text>
-        </Pressable> */}
+        </Pressable>
       </View>
     </View>
   );

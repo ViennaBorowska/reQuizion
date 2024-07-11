@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { Pressable, Text, StyleSheet, View } from "react-native";
 import Header from "../components/Header";
 import HomeButton from "../components/HomeButton";
 import { useNavigation } from "@react-navigation/native";
 
-const Homepage = () => {
+const Browse = () => {
   const navigation = useNavigation();
   return (
     <View style={{ alignContent: "center" }}>
@@ -104,4 +104,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Homepage;
+export default Browse;

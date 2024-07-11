@@ -101,9 +101,11 @@ const Results = () => {
             marginBottom: 20,
             borderRadius: 5,
           }}
-          onPress={() => navigation.navigate("Browse")}
+          onPress={() => navigation.navigate("Home")}
         >
-          <Text style={{ color: "white", textAlign: "center" }}>Continue</Text>
+          <Text style={{ color: "white", textAlign: "center" }}>
+            Back to Home
+          </Text>
         </Pressable>
       </Pressable>
     </SafeAreaView>
