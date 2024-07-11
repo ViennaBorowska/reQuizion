@@ -6,7 +6,7 @@ import Homepage from "./screens/Homepage";
 import Browse from "./screens/Browse";
 import UserQuizzes from "./screens/UserQuizzes";
 import Quiz from "./screens/Quiz";
-
+import Results from "./screens/Results";
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -25,6 +25,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Quiz"
           component={Quiz}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Results"
+          component={Results}
           options={{ headerShown: false }}
         />
         {/* <Stack.Screen

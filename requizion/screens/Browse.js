@@ -31,28 +31,45 @@ const Homepage = () => {
         <Pressable
           style={styles.button}
           title={"English Language"}
-          onPress={() => navigation.navigate("Quiz")}
+          onPress={() =>
+            navigation.navigate("Quiz", {
+              subject: "englishlang",
+            })
+          }
         >
           <Text>English Language</Text>
         </Pressable>
         <Pressable
           style={styles.button}
           title={"History"}
-          onPress={() => navigation.navigate("Quiz")}
+          onPress={() =>
+            navigation.navigate("Quiz", {
+              subject: "history",
+            })
+          }
         >
           <Text>History</Text>
         </Pressable>
+
         <Pressable
           style={styles.button}
           title={"Biology"}
-          onPress={() => navigation.navigate("Quiz")}
+          onPress={() =>
+            navigation.navigate("Quiz", {
+              subject: "biology",
+            })
+          }
         >
           <Text>Biology</Text>
         </Pressable>
         <Pressable
           style={styles.button}
           title={"Computer Science"}
-          onPress={() => navigation.navigate("Quiz")}
+          onPress={() =>
+            navigation.navigate("Quiz", {
+              subject: "computersci",
+            })
+          }
         >
           <Text>Computer Science</Text>
         </Pressable>
