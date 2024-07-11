@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Homepage from "./screens/Homepage";
 import Browse from "./screens/Browse";
 import UserQuizzes from "./screens/UserQuizzes";
+import Quiz from "./screens/Quiz";
 
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -19,6 +20,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Browse"
           component={Browse}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Quiz"
+          component={Quiz}
           options={{ headerShown: false }}
         />
         {/* <Stack.Screen

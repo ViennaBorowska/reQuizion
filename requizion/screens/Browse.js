@@ -19,32 +19,40 @@ const Homepage = () => {
           the homepage to create & play your own custom quiz!
         </Text>
       </View>
-      <View style={{ padding: 10 }}>
+      <View
+        style={{
+          padding: 10,
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          flexWrap: "wrap",
+          alignItems: "center",
+        }}
+      >
         <Pressable
           style={styles.button}
           title={"English Language"}
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Quiz")}
         >
           <Text>English Language</Text>
         </Pressable>
         <Pressable
           style={styles.button}
           title={"History"}
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Quiz")}
         >
           <Text>History</Text>
         </Pressable>
         <Pressable
           style={styles.button}
           title={"Biology"}
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Quiz")}
         >
           <Text>Biology</Text>
         </Pressable>
         <Pressable
           style={styles.button}
           title={"Computer Science"}
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Quiz")}
         >
           <Text>Computer Science</Text>
         </Pressable>
@@ -73,8 +81,8 @@ const styles = StyleSheet.create({
     width: 120,
     height: 100,
     borderRadius: 25,
-    marginLeft: "auto",
-    marginRight: "auto",
+    marginLeft: 5,
+    marginRight: 5,
     marginTop: 30,
   },
 });
