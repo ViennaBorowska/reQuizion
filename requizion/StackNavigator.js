@@ -7,6 +7,8 @@ import Browse from "./screens/Browse";
 import UserQuizzes from "./screens/UserQuizzes";
 import Quiz from "./screens/Quiz";
 import Results from "./screens/Results";
+import CreateQuiz from "./screens/CreateQuiz";
+
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -32,11 +34,16 @@ const StackNavigator = () => {
           component={Results}
           options={{ headerShown: false }}
         />
-        {/* <Stack.Screen
+        <Stack.Screen
           name="UserQuizzes"
           component={UserQuizzes}
           options={{ headerShown: false }}
-        /> */}
+        />
+        <Stack.Screen
+          name="CreateQuiz"
+          component={CreateQuiz}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
